@@ -1,7 +1,5 @@
 <?php
-$client = new MongoDB\Client(
-    'mongodb+srv://birdnestdatabase:birdnestmongodb@cluster-0/test?retryWrites=true&w=majority'
-);
+$client = MongoDB\Driver\Manager("mongodb+srv://birdnestdatabase:birdnestmongodb@cluster-0/test?retryWrites=true&w=majority");
 
 $db = $client->test;
 header('content-type: application/json');
